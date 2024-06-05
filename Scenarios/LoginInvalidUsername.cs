@@ -1,10 +1,7 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+ 
 
 namespace setupEnviroment.Scenarios
 {
@@ -31,7 +28,7 @@ namespace setupEnviroment.Scenarios
 
             alert = Driver.driver.SwitchTo().Alert();
 
-            Assert.Equals(Config.AlertsMessages.UsernameLengthOutOfRange, alert.Text);
+            ClassicAssert.AreEqual(Config.AlertsMessages.UsernameLengthOutOfRange, alert.Text);
             alert.Accept();
         }
 
@@ -43,7 +40,7 @@ namespace setupEnviroment.Scenarios
 
             alert = Driver.driver.SwitchTo().Alert();
 
-            Assert.Equals(Config.AlertsMessages.UsernameLengthOutOfRange, alert.Text);
+            ClassicAssert.AreEqual(Config.AlertsMessages.UsernameLengthOutOfRange, alert.Text);
             alert.Accept();
         }
 
